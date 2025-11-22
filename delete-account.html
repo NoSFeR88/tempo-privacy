@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account - TEMPO Nutrition Tracker</title>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+    .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+        color: #DC2626;
+        border-bottom: 3px solid #DC2626;
+        padding-bottom: 10px;
+    }
+    h2 {
+        color: #991B1B;
+        margin-top: 30px;
+    }
+    .warning {
+        background-color: #FEE2E2;
+        padding: 20px;
+        border-left: 4px solid #DC2626;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .info-box {
+        background-color: #DBEAFE;
+        padding: 20px;
+        border-left: 4px solid #3B82F6;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    .success-box {
+        background-color: #D1FAE5;
+        padding: 20px;
+        border-left: 4px solid #10B981;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    ul {
+        line-height: 1.8;
+    }
+    a {
+        color: #10B981;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .button {
+        display: inline-block;
+        background-color: #10B981;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+    .button:hover {
+        background-color: #059669;
+        text-decoration: none;
+    }
+    .danger-button {
+        background-color: #DC2626;
+    }
+    .danger-button:hover {
+        background-color: #B91C1C;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Account & Data Deletion Request</h1>
+
+    <div class="warning">
+        <strong>⚠️ Important:</strong> Account deletion is permanent and irreversible. All your nutrition data, food logs, progress, and settings will be permanently deleted.
+    </div>
+
+    <h2>Overview</h2>
+    <p>At TEMPO, we respect your privacy and provide you with the right to request the deletion of your account and any associated data at any time, in compliance with GDPR, CCPA, and other privacy regulations.</p>
+
+    <h2>What Gets Deleted</h2>
+    <p>When you request account deletion, the following data will be permanently removed:</p>
+    <ul>
+        <li><strong>Account Information:</strong> Email, name, profile picture, authentication credentials</li>
+        <li><strong>Nutrition Data:</strong> All food logs, meal entries, consumption history</li>
+        <li><strong>Health Metrics:</strong> Weight, height, BMI, nutritional goals, progress tracking</li>
+        <li><strong>Custom Foods:</strong> Any foods you created manually</li>
+        <li><strong>Settings & Preferences:</strong> Themes, notifications, dietary restrictions, allergies</li>
+        <li><strong>Cloud Sync Data:</strong> All data stored in Firebase Firestore (if you enabled cloud sync)</li>
+        <li><strong>Food Photos:</strong> Any photos you uploaded to Firebase Storage</li>
+        <li><strong>Analytics Data:</strong> Crash logs and usage analytics tied to your account</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Note about local data:</strong> Data stored locally on your device will persist until you uninstall the app or clear app data manually. We recommend clearing app data from Android Settings after account deletion is confirmed.
+    </div>
+
+    <h2>What Happens to Premium Subscriptions</h2>
+    <div class="warning">
+        <strong>Action Required:</strong> If you have an active Premium subscription, you must cancel it separately through Google Play Store BEFORE deleting your account.
+        <br><br>
+        <strong>How to cancel:</strong>
+        <ul style="margin-top: 10px;">
+            <li>Open Google Play Store app</li>
+            <li>Tap Menu > Subscriptions</li>
+            <li>Find TEMPO Premium</li>
+            <li>Tap Cancel subscription</li>
+        </ul>
+        Deleting your account does NOT automatically cancel subscriptions. You may continue to be charged if you don't cancel separately.
+    </div>
+
+    <h2>Deletion Methods</h2>
+
+    <h3>Method 1: In-App (Recommended)</h3>
+    <ol>
+        <li>Open TEMPO app</li>
+        <li>Go to <strong>Settings > Account</strong></li>
+        <li>Scroll to bottom and tap <strong>Delete Account</strong></li>
+        <li>Confirm deletion (you'll be asked twice to prevent accidents)</li>
+        <li>Your account will be deleted immediately</li>
+    </ol>
+
+    <h3>Method 2: Email Request</h3>
+    <p>If you cannot access the app, send an email to:</p>
+    <div class="success-box">
+        <strong>Email:</strong> <a href="mailto:privacy@tempo-nutrition.com">privacy@tempo-nutrition.com</a>
+        <br><br>
+        <strong>Subject:</strong> Account Deletion Request
+        <br><br>
+        <strong>Include:</strong>
+        <ul style="margin-top: 10px;">
+            <li>Your full name</li>
+            <li>Email address used for account</li>
+            <li>Reason for deletion (optional but helpful)</li>
+            <li>Confirmation statement: "I confirm I want to permanently delete my TEMPO account and all associated data"</li>
+        </ul>
+    </div>
+
+    <a href="mailto:privacy@tempo-nutrition.com?subject=Account%20Deletion%20Request&body=Full%20Name%3A%20%0AEmail%3A%20%0AReason%20(optional)%3A%20%0A%0AI%20confirm%20I%20want%20to%20permanently%20delete%20my%20TEMPO%20account%20and%20all%20associated%20data." class="button danger-button">Send Deletion Request Email</a>
+
+    <h2>Processing Timeline</h2>
+    <ul>
+        <li><strong>In-App Deletion:</strong> Immediate (account deleted instantly)</li>
+        <li><strong>Email Request:</strong> We will verify your identity and process deletion within <strong>7 business days</strong></li>
+        <li><strong>Confirmation:</strong> You will receive an email confirmation once deletion is complete</li>
+        <li><strong>Backup Removal:</strong> Encrypted backups may persist for up to 30 days before automatic removal</li>
+    </ul>
+
+    <h2>What We Keep (Legal Requirements)</h2>
+    <p>For legal, security, and fraud prevention purposes, we may retain certain anonymized data:</p>
+    <ul>
+        <li>Anonymized usage statistics (no personal identifiers)</li>
+        <li>Purchase records (required by tax law for 7 years)</li>
+        <li>Fraud detection logs (hashed identifiers only)</li>
+    </ul>
+    <p><strong>This retained data cannot be linked back to you.</strong></p>
+
+    <h2>Alternatives to Deletion</h2>
+    <p>Before deleting your account, consider these alternatives:</p>
+
+    <h3>Export Your Data First</h3>
+    <p>You can export all your nutrition data before deletion:</p>
+    <ul>
+        <li>Settings > Data > Export Data</li>
+        <li>Choose format: CSV or JSON</li>
+        <li>Save to your device for personal records</li>
+    </ul>
+
+    <h3>Temporary Break</h3>
+    <ul>
+        <li>Simply stop using the app (data remains on your device)</li>
+        <li>Disable notifications: Settings > Notifications</li>
+        <li>Disable cloud sync: Settings > Account > Cloud Sync</li>
+    </ul>
+
+    <h3>Remove Ads</h3>
+    <ul>
+        <li>If ads are the concern, upgrade to Premium ($4.99/month or $39.99/year)</li>
+        <li>No ads, more features, priority support</li>
+    </ul>
+
+    <h2>After Deletion</h2>
+    <div class="info-box">
+        <h3>Can I Create a New Account?</h3>
+        <p>Yes, you can create a new account anytime. However, all previous data will be lost and cannot be recovered.</p>
+
+        <h3>Can I Recover My Data?</h3>
+        <p><strong>No.</strong> Deletion is permanent and irreversible. Make sure to export your data before deletion if you want to keep records.</p>
+
+        <h3>Will I Still Receive Emails?</h3>
+        <p>You will be automatically unsubscribed from all marketing emails. You may receive one final confirmation email confirming deletion.</p>
+    </div>
+
+    <h2>Questions or Issues?</h2>
+    <p>If you have questions about account deletion or data privacy:</p>
+    <ul>
+        <li><strong>Privacy Questions:</strong> <a href="mailto:privacy@tempo-nutrition.com">privacy@tempo-nutrition.com</a></li>
+        <li><strong>General Support:</strong> <a href="mailto:support@tempo-nutrition.com">support@tempo-nutrition.com</a></li>
+        <li><strong>Privacy Policy:</strong> <a href="index.html">Read Full Privacy Policy</a></li>
+    </ul>
+
+    <div class="warning">
+        <h3>Your Privacy Rights</h3>
+        <p>Under GDPR and CCPA, you have the right to:</p>
+        <ul>
+            <li>Access your data</li>
+            <li>Correct inaccurate data</li>
+            <li>Export your data (data portability)</li>
+            <li>Delete your data (right to be forgotten)</li>
+            <li>Object to processing</li>
+            <li>Withdraw consent</li>
+        </ul>
+        <p>We are committed to honoring these rights. Contact us anytime at <a href="mailto:privacy@tempo-nutrition.com">privacy@tempo-nutrition.com</a></p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #E5E7EB;">
+
+    <p style="text-align: center; color: #666;">
+        <a href="index.html">Back to Privacy Policy</a> |
+        <a href="mailto:privacy@tempo-nutrition.com">Contact Privacy Team</a>
+    </p>
+
+    <p style="text-align: center; margin-top: 20px; color: #666;">© 2025 TEMPO - Part of Ecosistema Salud. All rights reserved.</p>
+</div>
+</body>
+</html>
