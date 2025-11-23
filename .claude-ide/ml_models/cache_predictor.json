@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "saved_at": "2025-11-23T00:23:02.361616",
+  "metrics": {
+    "predictions_made": 0,
+    "predictions_correct": 0,
+    "cache_hits_from_predictions": 0,
+    "patterns_learned": 0,
+    "model_updates": 0
+  },
+  "sequence_patterns": [],
+  "co_occurrence_matrix": {},
+  "temporal_patterns": {},
+  "file_stats": {},
+  "access_history": [],
+  "prediction_cache": {}
+}
