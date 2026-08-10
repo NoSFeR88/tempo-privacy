@@ -1,0 +1,4 @@
+.claude-ide/
+logs/
+*.jsonl
+PUSH_TO_GITHUB.sh
